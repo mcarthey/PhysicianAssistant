@@ -30,9 +30,12 @@ public class PubMedService : IPubMedService
 
         try
         {
-            // Build pediatric-focused query from symptom keywords
-            var symptomTerms = string.Join("+AND+", symptoms.Select(s => $"{s}[tiab]"));
-            var query = $"{symptomTerms}+AND+pediatric[tiab]+AND+2018:2026[dp]";
+            // Build pediatric-focused query — OR between symptoms for broader matching.
+            // Use spaces (not +) so Uri.EscapeDataString handles encoding correctly.
+            var symptomTerms = symptoms.Length == 1
+                ? $"{symptoms[0]}[tiab]"
+                : $"({string.Join(" OR ", symptoms.Select(s => $"{s}[tiab]"))})";
+            var query = $"{symptomTerms} AND (pediatric[tiab] OR child[tiab] OR infant[tiab]) AND 2015:2026[dp]";
 
             _logger.LogInformation("PubMed search query: {Query}", query);
 

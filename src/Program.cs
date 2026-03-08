@@ -57,7 +57,7 @@ app.MapGet("/health", () => Results.Ok(new
 }));
 
 // Triage webhook — Twilio WhatsApp messages arrive here
-app.MapPost("/webhook/triage", async (HttpRequest request, ITriageService triageService, ILogger<Program> logger) =>
+app.MapPost("/sms", async (HttpRequest request, ITriageService triageService, ILogger<Program> logger) =>
 {
     var form = await request.ReadFormAsync();
     var incomingMessage = form["Body"].ToString();
