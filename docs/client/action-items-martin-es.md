@@ -128,7 +128,7 @@ Dime 2–3 horarios que te sirvan. Soy flexible con la zona horaria.
 
 ---
 
-Un abrazo,
+Saludos,
 
 Mark
 Learned Geek LLC

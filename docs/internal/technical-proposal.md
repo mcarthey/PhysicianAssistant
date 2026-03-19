@@ -535,7 +535,7 @@ Martin's Q4 response reveals he is already thinking about this as a platform: B2
 - [ ] Review Anthropic Acceptable Use Policy for medical/clinical restrictions
 - [ ] Review Meta/WhatsApp Business Policy for health data messaging restrictions
 - [ ] Review Twilio policies for medical use
-- [ ] Call insurance agent — verify E&O coverage for AI/medical + international claims
+- [ ] Get E&O / professional liability / cyber liability insurance quotes — no current policy beyond LLC
 - [ ] Prepare tiered scope options (full vs lean MVP) for budget conversation
 - [ ] Update POC to include Category B vision model test + lab value parsing
 - [ ] Draft engagement letter template (scope, IP ownership, liability cap, indemnification)
